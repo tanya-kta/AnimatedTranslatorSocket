@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  socket:
+    build: .
+    command: npm start
+    container_name: AnimatedTranslatorSocket
+    restart: unless-stopped
+    volumes:
+      - .:/AnimatedTranslatorSocket
+      - /AnimatedTranslatorSocket/node_modules
+    ports:
+      - "2086:9000"
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
