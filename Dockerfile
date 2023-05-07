@@ -1,6 +1,6 @@
 FROM node
 
-WORKDIR /AnimatedTranslatorSocket
+WORKDIR /socket
 
 COPY package.json .
 RUN npm install --quiet
