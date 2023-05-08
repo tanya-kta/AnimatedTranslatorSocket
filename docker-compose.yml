@@ -3,14 +3,14 @@ version: "3"
 services:
   socket:
     build: .
-    command: yarn start
+    command: npm start
     container_name: socket
     restart: unless-stopped
     volumes:
       - .:/socket
       - /socket/node_modules
     ports:
-      - "2086:9000"
+      - "9000:9000"
     networks:
       - postgres
 
