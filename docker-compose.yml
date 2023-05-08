@@ -3,7 +3,7 @@ version: "3"
 services:
   socket:
     build: .
-    command: npm start
+    command: yarn start
     container_name: socket
     restart: unless-stopped
     volumes:
